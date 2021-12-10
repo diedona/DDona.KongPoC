@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  kong.api.orders:
+    image: ${DOCKER_REGISTRY-}kong.api.orders
+    container_name: kong.api.orders
+    build:
+      context: .
+      dockerfile: ../microservices/DDona.KongPoC.OrdersAPI/Dockerfile
+    ports:
+      - "6001:443"
+
+  kong.api.products:
+    image: ${DOCKER_REGISTRY-}kong.api.products
+    container_name: kong.api.products
+    build:
+      context: .
+      dockerfile: ../microservices/DDona.KongPoC.ProductsAPI/Dockerfile
+    ports:
+      - "5001:443"
