@@ -6,7 +6,7 @@ namespace DDona.KongPoC.ProductsAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductController : ControllerBase
+    public class ProductsController : ControllerBase
     {
         private readonly IEnumerable<string> _Products = new[] { "Apple", "Banana", "Lemon" };
 

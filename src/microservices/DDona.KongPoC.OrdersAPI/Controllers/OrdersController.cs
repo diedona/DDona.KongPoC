@@ -9,7 +9,7 @@ namespace DDona.KongPoC.OrdersAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class OrderController : ControllerBase
+    public class OrdersController : ControllerBase
     {
         [HttpGet]
         public ActionResult<string> Get()
